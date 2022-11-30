@@ -25,69 +25,88 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Presento - v3.9.1
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
+ <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/els.els.16121471/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/ELS0ma/?ref=page_internal" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="{% static 'assets/img/logo.png' %}" alt=""></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="#menu">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'blog:home' %}">Blog</a></li>
+            <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
+
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Buy a course</a>
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
-        <div class="col-xl-6">
-          <h1>Bettter digital experience with Presento</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <div class="col-lg-8">
+          <h1>A place where learning begins<span>.</span></h1>
+          <h2>Upscaling you for future encounters in career and business</h2>
+
+          <div class="btns">
+            <a href="#about" class="btn-menu animated fadeInUp scrollto">Learn more</a>
+          </div>
         </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+        </div>
+
       </div>
     </div>
-
   </section><!-- End Hero -->
 
   <main id="main">
@@ -104,8 +123,7 @@
             <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -114,226 +132,15 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-              <a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
-            </div>
+    <section id="about" class="about">
+      <div class="container d-flex flex-column align-items-center" data-aos="fade-up">
+          <div class="section-title">
+              <h2>About Us</h2>
           </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
-
+          <p class="col-9">eLearning Solutions Limited (ELS) is a Company leveraging on Digital Technology to design, deliver and deploy Education and training solutions across the spectrum that includes the youth, Institutions and Corporates. Our solutions range from custom content development, rapid authoring, mobile learning, responsive content, game-based learning, social learning solutions, translation and localization in various languages. We pride in offering our clients training packages that ensure optimal use of time available through a blended approach in both virtual and face time training. We offer consultancy in training on content design, graphic design, digital content authoring, online facilitation and online course management. We are a National, Industrial and Technical Authority (NITA) accredited eLearning provider. We have pioneered in high quality and cost-effective E-learning solutions in Education in Kenya. We have the experience, expertise and access to key resources that will enable our clientele to fulfill their online requirements.</p>
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Tabs Section ======= -->
-    <section id="tabs" class="tabs">
-      <div class="container" data-aos="fade-up">
-
-        <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-3">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class="ri-gps-line"></i>
-              <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class="ri-body-scan-line"></i>
-              <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-              <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class="ri-store-line"></i>
-              <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="{% static 'assets/img/tabs-1.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'assets/img/tabs-2.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'assets/img/tabs-3.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'assets/img/tabs-4.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Tabs Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg ">
@@ -341,50 +148,56 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
         </div>
 
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4><a href="#">Identification of content</a></h4>
+              <p>e.g. psychosocial training content for the identified target audience (parents’/care givers, teachers, chaplains, education officers, peer educators)</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-card-checklist"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4><a href="#">Development of storyboards</a></h4>
+              <p>Scripting of the courses/content to include multi-media aspects and the subject matter</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4><a href="#">Learning Management System Solutions</a></h4>
+              <p>Customization and configuration of the LMS for the project</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <h4><a href="#">Collection of data</a></h4>
+              <p>for the required materials, videos, audio, illustrations, simulations, animations etc.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <h4><a href="#">Production and packaging</a></h4>
+              <p>Production and packaging both online and offline courses and content.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-calendar4-week"></i>
-              <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <h4><a href="#">Editing, pilot testing and revision</a></h4>
+              <p>This involves testing the programs with a few users for improvements before roll out</p>
+            </div>
+          </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-pen"></i>
+              <h4><a href="#">Compilation and authoring</a></h4>
+              <p>Putting together all the content into an online course and authoring it into the platform</p>
             </div>
           </div>
         </div>
@@ -399,7 +212,6 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -411,11 +223,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>Pamela Ayugi</h3>
+                  <h4>PSS Trainee</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    The training is quite comprehensive . I am completely rejuvenated and can comfortably handle issues in relation to Psychosocial support. Thanks
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -425,11 +237,25 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>Omudele John</h3>
+                  <h4>PSS Trainee</h4>
+                  <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        This was an educative and wonderful session. It has improved my personality a great deal. I loved it. Kudos to the organizer.
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Roselyne mukhuchi</h3>
+                  <h4>PSS Trainee</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      Very educative learning more about child protection. After engaging learners in this discussion, majority have opened up and shared various issues resulting from the effects of COVID 19.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -439,11 +265,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>Ruth Kivondo</h3>
+                  <h4>PSS Trainee</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      The training is very important to the teachers,learners, and parents. We will share the knowledge with all hoping they will embrace it. We appreciate your concern especially at this time of COVID-19.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -453,11 +279,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>John Okumu</h3>
+                  <h4>PSS Trainee</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      This has been interactive learning with Relevant application
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -467,25 +293,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <h3>Hamisa Shaban</h3>
+                  <h4>PSS Trainee</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      Very educative lessons for me .Will assist me in guidance and counseling in school and the entire community at large.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -501,13 +313,11 @@
       </div>
     </section><!-- End Testimonials Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
+ <section id="team" class="team section-bg">
+      <div class="container">
 
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
           <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
         </div>
 
         <div class="row">
@@ -515,16 +325,13 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Esther.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/esther-gacicio-3a69897/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
+                <h4>Esther Gacicio</h4>
                 <span>Chief Executive Officer</span>
               </div>
             </div>
@@ -533,35 +340,25 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Mercy.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/mercy-ringa-wanjagi-9a2b5353/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Mercy Ringa</h4>
+                <span>Content Expert</span>
               </div>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="{% static 'assets/img/team/Grace.png' %}" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Grace Maina</h4>
+                <span>Content Expert</span>
               </div>
             </div>
           </div>
@@ -569,17 +366,67 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
-                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/team/Abijah.jpg' %}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://ke.linkedin.com/in/abijah-wachira-1b150091"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Abijah Wachira</h4>
+                <span>Operations Manager</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/Nasievanda.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://ke.linkedin.com/in/harriet-nasievanda-269a6411a"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Harriet Nasievanda</h4>
+                <span>Marketing and Admin</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/Fiona.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://ke.linkedin.com/in/fiona-yvette-baraza"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Fiona Baraza</h4>
+                <span>Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/Gidraph.png' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://ke.linkedin.com/in/gidraph-kinyua"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Gidraph Muriuki</h4>
+                <span>Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/rufas.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Rufas Nasibi</h4>
+                <span>Graphic Designer</span>
               </div>
             </div>
           </div>
@@ -589,13 +436,13 @@
       </div>
     </section><!-- End Team Section -->
 
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -607,21 +454,21 @@
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Design Center, Tausi Road</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>info@elearningsolutions.co.ke</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+254 0110006964</p>
                 </div>
               </div>
             </div>
@@ -660,82 +507,6 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Presento<span>.</span></h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -749,6 +520,22 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+{#  <script type="module" src="{% static 'js/vanta.js' %}"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+<script>
+ VANTA.FOG({
+  el: '#hero',
+  highlightColor: 0xca00d4,
+  midtoneColor: 0xff0000,
+  lowlightColor: 0xffed00,
+  baseColor: 0x1c0036,
+  blurFactor: 0.8,
+  speed: 1.5,
+})
+</script>
+
+
 
 </body>
 

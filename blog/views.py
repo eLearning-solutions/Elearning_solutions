@@ -1,8 +1,12 @@
-from django.shortcuts import render
-from django.utils import timezone
+from django.views import generic
 from .models import Post
 
 
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'blog/index.html'
+
+
+class PostDetail(generic.DetailView):
+    model = Post
+    template_name = 'blog/post_detail.html'
