@@ -35,12 +35,13 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
             {% for post in post_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+            <div class="blog-container">
+                <div class="square">
+                    <img class="img-fluid" src="{{ post.cover.url}}" alt="{{ post.title }}">
+                    <div class="blog-h1 m-2">{{ post.title }}</div>
+                    <p class="card-text blog-p text-muted h6 p-2">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text mx-2">{{post.content|slice:":150" }}</p>
+                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary m-2">Read More &rarr;</a>
                 </div>
             </div>
             {% endfor %}
@@ -48,3 +49,4 @@
     </div>
 </div>
 {%endblock%}
+
