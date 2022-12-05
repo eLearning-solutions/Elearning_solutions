@@ -1,21 +1,26 @@
 {% extends "shop/base.html" %}
 {% block content %}
-    <div class="container">
+    <div class="container m-4">
+    <h2>Courses</h2>
     <div class="row">
         <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 left">
+
             {% for course in course_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img class="img-fluid" src="{{ course.cover.url}}" alt="{{ course.title }}">
-                    <h2 class="card-title">{{ course.title }}</h2>
-                    <p class="card-text text-muted h6">{{ course.author }} | {{ course.created_on}} </p>
-                    <p class="card-text">Ksh. {{course.price }}</p>
-                    <a href="{% url 'shop:course_detail' course.slug  %}" class="btn btn-primary">Read Description &rarr;</a>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item">
+                            <img class="img-fluid" src="{{ course.cover.url}}" alt="{{ course.title }}">
+                            <div class="d-flex flex-column justify-content-between  mb-3">
+                                <p class="card-text text-muted h6">{{ course.author }} | {{ course.created_on}} </p>
+                              <h4>{{ course.title }}</h4>
+                              <p class="price">Ksh. {{course.price }}</p>
+                            </div>
+                            <a href="{% url 'shop:course_detail' course.slug  %}" class="btn btn-primary">Read Description &rarr;</a>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
-        </div>
+
     </div>
 </div>
 {% endblock %}
+
+
