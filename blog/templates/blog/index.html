@@ -1,52 +1,58 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        background-color: #fdfdfd;
-    }
+ <h2>Blog</h2>
+     <section id="hero-slider" class="hero-slider">
+      <div class="container-md" data-aos="fade-in">
+        <div class="row d-flex justify-content-center mb-5">
+          <div class="col-10">
+            <div class="swiper sliderFeaturedPosts" >
+              <div class="swiper-wrapper">
+                  {% for post in post_list %}
+                    <div class="swiper-slide">
+                      <a href="{% url 'blog:post_detail' post.slug  %}" class="img-bg d-flex align-items-center" style="background-image: url('{{ post.cover.url }}');">
+                        <div class="img-bg-inner">
+                          <h2>{{ post.title }}</h2>
+                          <p class="card-text mx-2">{{post.content|slice:":200" }}</p>
+                        </div>
+                      </a>
+                    </div>
+                  {% endfor %}
 
-    .head_text {
-        color: white;
-    }
 
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
+              </div>
 
-<header class="masthead">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my awesome Blog </h3>
-                    <p class="text-light">We Love Django As much as you do..! &nbsp
-                    </p>
-                </div>
+
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
         </div>
+      </div>
+    </section><!-- End Hero Slider Section -->
+
+    <div class="container col-10">
+      {% for post in post_list %}
+        <article class="postcard light blue">
+			<a class="postcard__img_link" href="{% url 'blog:post_detail' post.slug  %}">
+				<img class="postcard__img" src="{{ post.cover.url}}" alt="{{ post.title }}" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="{% url 'blog:post_detail' post.slug  %}">{{ post.title }}</a></h1>
+				<div class="postcard__subtitle small">
+					<div>
+						<i class="fas fa-calendar-alt mr-2"></i>{{ post.created_on}} || {{ post.author }}
+					</div>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt"><p class="card-text mx-2">{{post.content|slice:":150" }}</p></div>
+			</div>
+		</article>
+    {% endfor %}
     </div>
-</header>
-<div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 left">
-            {% for post in post_list %}
-            <div class="blog-container">
-                <div class="square">
-                    <img class="img-fluid" src="{{ post.cover.url}}" alt="{{ post.title }}">
-                    <div class="blog-h1 m-2">{{ post.title }}</div>
-                    <p class="card-text blog-p text-muted h6 p-2">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text mx-2">{{post.content|slice:":150" }}</p>
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary m-2">Read More &rarr;</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+
+
 {%endblock%}
+
+
+
+
 

@@ -3,13 +3,15 @@
 <html>
 
     <head>
-        <title>Django Central</title>
+        <title>Elearning Solutions</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <meta name="google" content="notranslate" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="{% static 'img/logo-small.ico' %}" rel="icon">
+
     </head>
 
     <body>
@@ -45,5 +47,29 @@
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+  var swiper = new Swiper(".sliderFeaturedPosts", {
+    spaceBetween: 0,
+    speed: 500,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".custom-swiper-button-next",
+      prevEl: ".custom-swiper-button-prev",
+    },
+  });
+
+        </script>
+
     </body>
 </html>
