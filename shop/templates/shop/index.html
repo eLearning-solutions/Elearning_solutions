@@ -1,26 +1,36 @@
 {% extends "shop/base.html" %}
 {% block content %}
+    <div class="index-container">
     <div class="container m-4">
     <h2>Courses</h2>
-    <div class="row">
+    <div class="row mx-auto">
         <!-- Blog Entries Column -->
 
             {% for course in course_list %}
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                            <img class="img-fluid" src="{{ course.cover.url}}" alt="{{ course.title }}">
-                            <div class="d-flex flex-column justify-content-between  mb-3">
-                                <p class="card-text text-muted h6">{{ course.author }} | {{ course.created_on}} </p>
-                              <h4>{{ course.title }}</h4>
-                              <p class="price">Ksh. {{course.price }}</p>
+                  <div class="card">
+                        <div class="card-header">
+                          <img src="{{ course.cover.url}}" alt="{{ course.title }}" />
+                        </div>
+                        <div class="card-body border-top">
+                          <p class="card-text">{{ course.title }}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button class="btn btn-primary"><a class="text-white" style="text-decoration: none" href="{% url 'shop:course_detail' course.slug  %}">View</a></button>
                             </div>
-                            <a href="{% url 'shop:course_detail' course.slug  %}" class="btn btn-primary">Read Description &rarr;</a>
-                    </div>
-                </div>
+                            <small class="text-muted">Ksh. {{course.price }}</small>
+                          </div>
+                        </div>
+                  </div>
+
             {% endfor %}
+
 
     </div>
 </div>
+
+    </div>
+
 {% endblock %}
+
 
 
