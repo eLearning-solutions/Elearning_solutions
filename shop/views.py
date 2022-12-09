@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views import generic
 from .models import Course
 
@@ -10,4 +11,9 @@ class CourseList(generic.ListView):
 class CourseDetail(generic.DetailView):
     model = Course
     template_name = 'shop/course_detail.html'
+
+
+def checkout(request):
+    context = {}
+    return render(request, 'shop/checkout.html', context)
 
