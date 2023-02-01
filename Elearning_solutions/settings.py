@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-@#m)t7-!sgijf)^@etaymh-ru_yy62toiu3ah*e5383ofd#rwq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -126,4 +126,16 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'admin@elearningsolutions.co.ke'
+EMAIL_HOST_PASSWORD = 'givuilwzllyresmh'
+DEFAULT_FROM_EMAIL = 'ELSAT Hub <admin@elearningsolutions.co.ke>'
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0:8000', 'http://127.0.0.1:8000', 'http://localhost:8000',
+                        'https://elearningsolutions.co.ke']
 

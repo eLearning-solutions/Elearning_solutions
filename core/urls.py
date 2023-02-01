@@ -6,4 +6,5 @@ app_name = 'core'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('offload-email/', views.offload_email, name='offload_email'),
 ]
