@@ -239,6 +239,13 @@
     selector: '.portfolio-lightbox'
   });
 
+    /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
   /**
    * Portfolio details slider
    */
