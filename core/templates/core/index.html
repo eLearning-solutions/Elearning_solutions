@@ -73,6 +73,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#clients">Clients</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#menu">Services</a></li>
 {#            <li><a class="nav-link scrollto" href="{% url 'blog:home' %}">Blog</a></li>#}
@@ -115,26 +116,66 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" style="height: 70px; width: auto" alt="Childline Kenya"></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="Common Sense"></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="Ministry of education"></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="LISP"></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="Siemens"></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="Styles Production"></div>
-
+      <!-- End Clients Section -->
+      <div class="demo-row">
+        <div class="container" id="id-sponsors">
+          <div class="text-center">
+            <h2 style="margin:20px 0;color:#fff;">Platinum Sponsors</h2>
           </div>
-          <div class="swiper-pagination"></div>
+          <div id="sponsor-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt=""
+                        src="{% static 'assets/img/clients/client-2.png' %}"
+                        style="width: 200px;" /></div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt=""
+                        src="{% static 'assets/img/clients/client-3.png' %}"
+                        style="width: 155px;" /></div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt=""
+                        src="{% static 'assets/img/clients/client-4.png' %}"
+                        style="width: 200px;" /></div>
+                  </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt=""
+                        src="{% static 'assets/img/clients/client-6.png' %}"
+                        style="width: 160px; margin-top: 40px" /></div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt="" 
+                        src="{% static 'assets/img/clients/client-8.jpg' %}"
+                        style="width: 160px;" /></div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="sponsor-feature"><img alt="" 
+                        src="{% static 'assets/img/clients/client-5.png' %}" 
+                        style="width: 200px; margin-top: 40px" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Clients Section -->
+    </section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -156,10 +197,6 @@
           <h2>Services</h2>
             <p>What we do</p>
         </div>
-
-
-
-
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -208,6 +245,25 @@
               <i class="bi bi-pen"></i>
               <h4><a href="#">Compilation and authoring</a></h4>
               <p>Putting together all the content into an online course and authoring it into the platform</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-person-vcard-fill"></i>
+              <h4><a href="#">Recruitment Collaboration</a></h4>
+              <p>We collaborate with recruiters who are responsible for local and international job opportunities. Our goal is to ensure
+              that new hires are well-prepared for their roles by providing them with our comprehensive 21st-century soft skills
+              training. This training equips them with vital skills that are crucial in today's work environment.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-journal-text"></i>
+              <h4><a href="#">Scholarship Partnerships</a></h4>
+              <p>We have established partnerships with organizations that offer scholarships
+              for higher education locally and abroad. This initiative aligns with our mission to empower the next
+              generation of the workforce. By connecting individuals with scholarship opportunities, we are paving the
+              way for their personal and professional growth on a global scale.</p>
             </div>
           </div>
         </div>
@@ -606,15 +662,15 @@
   <script src="{% static  'vendor/php-email-form/validate.js' %}"></script>
 
 {# Jquery#}
- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
- <script>
-     window.onload = function() {
-         setTimeout(function() {
-             $('#myModal').modal('show');
-         }, 5000);
-     };
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            $('#myModal').modal('show');
+        }, 5000);
+    };
 
- </script>
+</script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
@@ -623,6 +679,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
 <script>
  VANTA.FOG({
   el: '#hero',
